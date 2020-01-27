@@ -1,0 +1,35 @@
+RabbitEventStorageService:
+    Db:
+        LogsConnString:
+            settings-key: RabbitEventStorageService-LogsConnString
+            types:
+              - AzureTableStorage
+RabbitEventStorageJob:
+  Db:
+    LogsConnString:
+      settings-key: RabbitEventStorageJob-LogsConnString
+      types:
+        - AzureTableStorage
+  Rabbit:
+    ConnectionString:
+      settings-key: ConnectionString
+      types:
+        - RabbitMq
+    ManagementUrl:
+      settings-key: ManagementUrl
+    Username:
+      settings-key: Username
+    Password:
+      settings-key: Password
+SlackNotifications:
+    AzureQueue:
+        ConnectionString:
+            settings-key: SlackNotificationsConnString
+            types:
+                - AzureTableStorage
+        QueueName:
+            settings-key: SlackQueueName
+MonitoringServiceClient:
+    MonitoringServiceUrl:
+        settings-key: MonitoringServiceUrl
+
