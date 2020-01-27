@@ -5,6 +5,10 @@ namespace Lykke.Service.RabbitEventStorage.Domain.Services
 {
     public interface IRabbitService
     {
-        Task<IEnumerable<Exchange>> GetAllExchanges();
+        Task<IEnumerable<Exchange>> GetAllExchangesAsync();
+
+        Task SaveMessageAsync(string exchangeName, string messagePayload);
+
+        Task RemoveSubscriptionsAsync();
     }
 }

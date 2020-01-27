@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Common;
 using Common.Log;
 using Lykke.Common.Log;
-using Lykke.JobTriggers.Triggers;
 using Lykke.Sdk;
 
 namespace Lykke.Job.RabbitEventStorage.Services
@@ -17,16 +16,16 @@ namespace Lykke.Job.RabbitEventStorage.Services
     {
         private readonly ILog _log;
         private readonly IEnumerable<IStopable> _items;
-        private readonly TriggerHost _triggerHost;
+        //private readonly TriggerHost _triggerHost;
 
         public ShutdownManager(
             ILogFactory logFactory, 
-            TriggerHost triggerHost,
+            //TriggerHost triggerHost,
             IEnumerable<IStopable> items)
         {
             _log = logFactory.CreateLog(this);
             _items = items;
-            _triggerHost = triggerHost;
+            //_triggerHost = triggerHost;
         }
 
         public async Task StopAsync()
@@ -44,7 +43,7 @@ namespace Lykke.Job.RabbitEventStorage.Services
                 }
             }
             
-            _triggerHost.Cancel();
+            //_triggerHost.Cancel();
             await Task.CompletedTask;
         }
     }

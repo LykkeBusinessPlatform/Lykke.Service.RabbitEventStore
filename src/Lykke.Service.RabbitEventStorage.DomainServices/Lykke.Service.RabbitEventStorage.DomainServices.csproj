@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="RabbitMQ.Client" Version="4.1.1" />
+    <PackageReference Include="RabbitMqHttpApiClient" Version="1.0.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lykke.Service.RabbitEventStorage.Domain\Lykke.Service.RabbitEventStorage.Domain.csproj" />

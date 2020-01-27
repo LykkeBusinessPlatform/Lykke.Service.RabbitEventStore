@@ -29,11 +29,11 @@ namespace Lykke.Job.RabbitEventStorage.RabbitPublishers
             // TODO: Make additional configuration, using fluent API here:
             // ex: .MakeDurable()
 
-            _publisher = new RabbitMqPublisher<MyPublishedMessage>(_logFactory, settings)
-                .SetSerializer(new JsonMessageSerializer<MyPublishedMessage>())
-                .SetPublishStrategy(new DefaultFanoutPublishStrategy(settings))
-                .PublishSynchronously()
-                .Start();
+            //_publisher = new RabbitMqPublisher<MyPublishedMessage>(_logFactory, settings)
+            //    .SetSerializer(new JsonMessageSerializer<MyPublishedMessage>())
+            //    .SetPublishStrategy(new DefaultFanoutPublishStrategy(settings))
+            //    .PublishSynchronously()
+            //    .Start();
         }
 
         public void Dispose()

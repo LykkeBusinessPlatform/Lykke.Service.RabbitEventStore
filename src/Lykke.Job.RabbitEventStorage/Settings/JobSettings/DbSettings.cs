@@ -6,5 +6,8 @@ namespace Lykke.Job.RabbitEventStorage.Settings.JobSettings
     {
         [AzureTableCheck]
         public string LogsConnString { get; set; }
+
+        [AzureTableCheck]
+        public string DataConnString { get; set; }
     }
 }

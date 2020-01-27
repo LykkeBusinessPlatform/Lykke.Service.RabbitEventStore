@@ -37,18 +37,18 @@ namespace Lykke.Job.RabbitEventStorage.RabbitSubscribers
             // TODO: Make additional configuration, using fluent API here:
             // ex: .MakeDurable()
 
-            _subscriber = new RabbitMqSubscriber<MySubscribedMessage>(
-                    _logFactory,
-                    settings,
-                    new ResilientErrorHandlingStrategy(
-                        _logFactory,
-                        settings,
-                        TimeSpan.FromSeconds(10),
-                        next: new DeadQueueErrorHandlingStrategy(_logFactory, settings)))
-                .SetMessageDeserializer(new JsonMessageDeserializer<MySubscribedMessage>())
-                .Subscribe(ProcessMessageAsync)
-                .CreateDefaultBinding()
-                .Start();
+            //_subscriber = new RabbitMqSubscriber<MySubscribedMessage>(
+            //        _logFactory,
+            //        settings,
+            //        new ResilientErrorHandlingStrategy(
+            //            _logFactory,
+            //            settings,
+            //            TimeSpan.FromSeconds(10),
+            //            next: new DeadQueueErrorHandlingStrategy(_logFactory, settings)))
+            //    .SetMessageDeserializer(new JsonMessageDeserializer<MySubscribedMessage>())
+            //    .Subscribe(ProcessMessageAsync)
+            //    .CreateDefaultBinding()
+            //    .Start();
         }
 
         private async Task ProcessMessageAsync(MySubscribedMessage arg)
