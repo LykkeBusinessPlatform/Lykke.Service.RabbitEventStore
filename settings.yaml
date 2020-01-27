@@ -10,17 +10,21 @@ RabbitEventStorageJob:
       settings-key: RabbitEventStorageJob-LogsConnString
       types:
         - AzureTableStorage
+    DataConnString:
+      settings-key: RabbitEventStorageJob-DataConnString
+      types:
+        - AzureTableStorage
   Rabbit:
     ConnectionString:
       settings-key: ConnectionString
       types:
         - RabbitMq
     ManagementUrl:
-      settings-key: ManagementUrl
+      settings-key: RabbitMq-ManagementUrl
     Username:
-      settings-key: Username
+      settings-key: RabbitMq-Username
     Password:
-      settings-key: Password
+      settings-key: RabbitMq-Password
 SlackNotifications:
     AzureQueue:
         ConnectionString:
