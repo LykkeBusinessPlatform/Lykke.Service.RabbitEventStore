@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -24,11 +24,28 @@
     <NoWarn>1701;1702;1705;1591</NoWarn>
   </PropertyGroup>
 
-  <ItemGroup Label="dotnet pack instructions">
-    <Content Include="$(OutputPath)Lykke.Job.LykkeJob.Contract.pdb">
-      <Pack>true</Pack>
-      <PackagePath>lib/netstandard2.0</PackagePath>
-    </Content>
+  <ItemGroup>
+    <DocFileItem Remove="bin\Debug\netstandard2.0\Lykke.Job.LykkeJob.Contract.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_OutputPathItem Remove="bin\Debug\netstandard2.0\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AppConfigFileDestination Remove="bin\Debug\netstandard2.0\Lykke.Job.RabbitEventStorage.Contract.dll.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FinalDocFile Remove="bin\Debug\netstandard2.0\Lykke.Job.LykkeJob.Contract.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DebugSymbolsOutputPath Remove="bin\Debug\netstandard2.0\Lykke.Job.RabbitEventStorage.Contract.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ApplicationManifestFinal Remove="bin\Debug\netstandard2.0\Native.Lykke.Job.RabbitEventStorage.Contract.manifest" />
   </ItemGroup>
 
 </Project>

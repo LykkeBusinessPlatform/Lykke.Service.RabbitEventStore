@@ -6,6 +6,8 @@ namespace Lykke.Job.RabbitEventStorage.Settings.JobSettings
     {
         [AmqpCheck]
         public string ConnectionString { get; set; }
+        
+        public string ExchangeRegex { set; get; }
 
         public string ManagementUrl { get; set; }
 

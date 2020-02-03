@@ -1,9 +1,3 @@
-RabbitEventStorageService:
-    Db:
-        LogsConnString:
-            settings-key: RabbitEventStorageService-LogsConnString
-            types:
-              - AzureTableStorage
 RabbitEventStorageJob:
   Db:
     LogsConnString:

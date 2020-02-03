@@ -33,11 +33,8 @@
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lykke.Service.RabbitEventStorage.AzureRepositories\Lykke.Service.RabbitEventStorage.AzureRepositories.csproj" />
-    <ProjectReference Include="..\Lykke.Service.RabbitEventStorage.Domain\Lykke.Service.RabbitEventStorage.Domain.csproj" />
-    <ProjectReference Include="..\Lykke.Service.RabbitEventStorage.DomainServices\Lykke.Service.RabbitEventStorage.DomainServices.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers" />
+    <ProjectReference Include="..\Lykke.Job.RabbitEventStorage.AzureRepositories\Lykke.Job.RabbitEventStorage.AzureRepositories.csproj" />
+    <ProjectReference Include="..\Lykke.Job.RabbitEventStorage.Domain\Lykke.Job.RabbitEventStorage.Domain.csproj" />
+    <ProjectReference Include="..\Lykke.Job.RabbitEventStorage.DomainServices\Lykke.Job.RabbitEventStorage.DomainServices.csproj" />
   </ItemGroup>
 </Project>

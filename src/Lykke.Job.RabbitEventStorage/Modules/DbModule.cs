@@ -3,9 +3,9 @@ using AzureStorage.Tables;
 using JetBrains.Annotations;
 using Lykke.Common.Log;
 using Lykke.Job.RabbitEventStorage.Settings;
-using Lykke.Service.RabbitEventStorage.AzureRepositories.Entities;
-using Lykke.Service.RabbitEventStorage.AzureRepositories.Repositories;
-using Lykke.Service.RabbitEventStorage.Domain.Repositories;
+using Lykke.Job.RabbitEventStorage.AzureRepositories.Entities;
+using Lykke.Job.RabbitEventStorage.AzureRepositories.Repositories;
+using Lykke.Job.RabbitEventStorage.Domain.Repositories;
 using Lykke.SettingsReader;
 
 namespace Lykke.Job.RabbitEventStorage.Modules
@@ -14,13 +14,11 @@ namespace Lykke.Job.RabbitEventStorage.Modules
     public class DbModule : Module
     {
         private readonly IReloadingManager<AppSettings> _appSettings;
-        private readonly string _connectionString;
 
 
         public DbModule(IReloadingManager<AppSettings> appSettings)
         {
             _appSettings = appSettings;
-            _connectionString = appSettings.CurrentValue.RabbitEventStorageJob.Db.DataConnString;
         }
 
         protected override void Load(ContainerBuilder builder)
